@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".registro.ActivityCadastro">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/novo_usuario"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorTexto"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center">
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="300dp"
+            android:layout_height="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@color/colorTexto" />
+
+        <TextView
+            android:id="@+id/status_1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/timeline_write"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/colorTexto"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/status_2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/timeline_write"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/colorTexto"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/status_3"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/timeline_write"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/colorTexto"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/status_4"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/timeline_write"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/colorTexto"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/status_5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/timeline_write"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/colorTexto"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <ViewFlipper
+        android:id="@+id/ViewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center">
+
+        <!-- add imagem e nome user -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_user"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/img_foto"
+                app:civ_border_color="@color/colorPrimary"
+                android:onClick="onClick"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/texto_foto"
+                android:textSize="8sp"
+                android:textColor="@color/colorTexto"
+                android:gravity="right"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
+
+                <EditText
+                    android:id="@+id/et_nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/nome"
+                    android:padding="20dp"
+                    android:textSize="18sp"
+                    android:drawableLeft="@drawable/img_user"
+                    android:drawablePadding="10dp"/>
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <!-- data de nascimento -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/img_data"
+                android:drawablePadding="10dp"
+                android:text="@string/data_nasc"
+                android:textSize="20dp" />
+
+            <DatePicker
+                android:id="@+id/dataPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:theme="@style/PickerStyle"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:animationCache="true"
+                />
+
+        </LinearLayout>
+
+        <!-- sexo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left"
+                android:text="@string/sexo"
+                android:textSize="20dp"
+                android:drawableLeft="@drawable/img_sexo"
+                android:drawablePadding="10dp"/>
+
+            <RadioGroup
+                android:id="@+id/rg_sexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_fem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/feminino"
+                    android:drawableTop="@drawable/img_girl"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:checked="true"/>
+
+                <RadioButton
+                    android:id="@+id/rb_masc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/masculino"
+                    android:drawableTop="@drawable/img_man"
+                    android:textSize="15sp"
+                    android:textAlignment="center" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- peso -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left"
+                android:text="@string/peso"
+                android:textSize="20dp"
+                android:drawableLeft="@drawable/img_peso"
+                android:drawablePadding="10dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <NumberPicker
+                    android:id="@+id/k"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"
+                    android:layout_gravity="center"
+                    android:theme="@style/PickerStyle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="."
+                    android:textColor="@color/colorTexto"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <NumberPicker
+                    android:id="@+id/g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"
+                    android:layout_gravity="center"
+                    android:theme="@style/PickerStyle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="Kg"
+                    android:textColor="@color/colorTexto"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- altura -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="left"
+                android:text="@string/altura"
+                android:textSize="20dp"
+                android:drawableLeft="@drawable/img_altura"
+                android:drawablePadding="10dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <NumberPicker
+                    android:id="@+id/m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"
+                    android:layout_gravity="center"
+                    android:theme="@style/PickerStyle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="."
+                    android:textColor="@color/colorTexto"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <NumberPicker
+                    android:id="@+id/cm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false"
+                    android:layout_gravity="center"
+                    android:theme="@style/PickerStyle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="M"
+                    android:textColor="@color/colorTexto"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- tela instruções -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/logo_chemo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:text="@string/texto_inicial"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/colorTexto"
+                android:textSize="15sp"
+                android:textAlignment="center"/>
+
+
+        </LinearLayout>
+
+        <!-- salvando tudo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/confirmar"
+                android:gravity="center"
+                android:textColor="@color/colorTexto"/>
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/imConf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:src="@drawable/img_confman" />
+        </LinearLayout>
+
+    </ViewFlipper>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_anterior"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/fui_transparent"
+            android:text="@string/anterior"
+            android:textColor="@color/colorTexto"
+            android:visibility="invisible"
+            android:onClick="onClick"/>
+
+        <Button
+            android:id="@+id/bt_proximo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/fui_transparent"
+            android:text="@string/proximo"
+            android:textColor="@color/colorTexto"
+            android:onClick="onClick"/>
+    </LinearLayout>
+
+</LinearLayout>

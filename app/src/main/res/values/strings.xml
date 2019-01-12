@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">CHEMODayle</string>
+    <string name="novo_usuario">NOVO USUÁRIO</string>
+    <string name="e_mail">E-mail</string>
+
+    <string name="texto_senha">A senha precisa conter no mínimo 6 caracteres</string>
+    <string name="texto_email">Ex: (xxxxxxx@xxxx.xxx).</string>
+    <string name="texto_data">Ex: (dd / mm / aaaa).</string>
+    <string name="senha">Senha</string>
+    <string name="confSenha">Confirmar Senha</string>
+    <string name="anterior">Anterior</string>
+    <string name="proximo">Próximo</string>
+    <string name="nome">Nome</string>
+    <string name="data_nasc">Data de Nascimento</string>
+    <string name="peso">Peso</string>
+    <string name="altura">Altura</string>
+    <string name="texto_foto">Click no icone para abrir a galeria do seu \n dispositivo e selecionar uma imagem.</string>
+    <string name="tipo_cancer">Tipo Câncer</string>
+    <string name="feminino">FEMININO</string>
+    <string name="masculino">MASCULINO</string>
+    <string name="sexo">Sexo</string>
+    <string name="texto_inicial">Este é o aplicativo CHEMO DAYLE, desenvolvido pra auxíliar os pacientes quimioterapicos em seu dia-a-dia. Aqui o paciente tem acesso a um ambiente ao qual será possivel adicionar lembretes para uso de medicamentos e datas de consultas como também acompanha seus ciclos de tratamentos, o aplicativo fornece um forum onde será possível compartilhar experiencias pessoais.</string>
+    <string name="confirmar">Pra finalizar o cadastro precione o botão \"CONCLUIR\".</string>
+    <string name="informacoes_e_dicas">Dicas e Informações</string>
+    <string name="agenda_paciente">Agenda do Paciente</string>
+    <string name="lista_medicamentos">Lista de Medicamentos</string>
+    <string name="dados_pessoais">Dados Pessoais</string>
+    <string name="alterar_senha">Alterar Senha</string>
+    <string name="informacoes_conta">Informações da Conta</string>
+    <string name="data_nascimento">Data Nascimento</string>
+    <string name="salvar">Salvar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="login">login</string>
+    <string name="texto_esqueceu_senha">Esqueceu sua senha?</string>
+    <string name="texto_recuper_senha">Para redefinir sua senha, acesse seu e-mail, precione o botão e verifique a sua caixa de menssagem para seguir as instruções.</string>
+    <string name="reset_senha">Redefinir senha</string>
+    <string name="grafico">Gráfico</string>
+    <string name="status">Status</string>
+    <string name="forum">Forum</string>
+    <string name="msg_status">Ajude-nos a monitorar seu bem-estar, informando como se sente diariamente e indicando se existe a prença de dor</string>
+    <string name="esta_tratamento">Está realizando algum ciclo de tratamento?</string>
+    <string name="status_descricao">Como você está se sentindo? Descreva os sintomas</string>
+    <string name="status_txt_emoji">Selecione o emoji que corresponde com o nível de dor que você está sentindo</string>
+    <string name="nome_medicamento">Nome do Medicamento</string>
+
+
+</resources>
